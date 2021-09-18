@@ -6,7 +6,7 @@ function RobotCollection ({robot}) {
    
         //const [robot, setRobot] = useState([])
 
-        const [ redirect, setRedirect ] = useState(false)
+        const [ redirect ] = useState(false)
 
         // useEffect( () => {
              

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, withRouter, Redirect, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Navi from './components/Navi';
@@ -50,12 +50,12 @@ class App extends React.Component{
           })
           .catch(error => console.log(error))
       }
-      console.log("::::::")
+     
       
       //if the user is logged in (if there's a token value), then run getUserDetail and getRobot
       if (localStorage.getItem("token")) { 
           getUserDetails()
-          console.log("!!!!!!!!!!!")
+  
          getRobot()
         }
       
@@ -66,7 +66,7 @@ class App extends React.Component{
       
   handleLogin = (currentUser, token) => { 
     // set current user, then redirect to home page
-    console.log("HANDLE LOGINNNNNN ???")
+
     this.setState({ currentUser }, () => {
       localStorage.setItem("token", token) //Initiate token in the localStorage
       this.props.history.push('/robot') //redirect: update the url to home 
