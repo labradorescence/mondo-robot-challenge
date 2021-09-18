@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import { Nav } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 function Navi({currentUser, handleLogout}){
 
@@ -21,8 +21,8 @@ function Navi({currentUser, handleLogout}){
         <li onClick = {handleLogout}> logout </li>
         
         
-        
-        {/* <Nav defaultActiveKey="/robot" as="ul">
+{/*         
+        <Nav >
             <Nav.Item as="li">
                 <Nav.Link href="/robot">ROBOT</Nav.Link>
             </Nav.Item>
@@ -32,7 +32,9 @@ function Navi({currentUser, handleLogout}){
             <Nav.Item as="li">
                 <Nav.Link href="/admin">ADMIN</Nav.Link>
             </Nav.Item>
-            <li onClick = {handleLogout}> logout </li> 
+            <Nav.Item as="li">
+                <Nav.Link onClick = {handleLogout}>LOGOUT</Nav.Link>
+            </Nav.Item>
         </Nav>
                  */}
         

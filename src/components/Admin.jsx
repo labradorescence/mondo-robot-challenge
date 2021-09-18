@@ -3,16 +3,15 @@ import React, {useState} from 'react';
 import RobotCard from './RobotCard';
 import { Card } from 'react-bootstrap';
 
+
 function Admin ( {robot} ){
 
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
 
-   
+    const fileInput = React.createRef();
 
-
-
-     //Create Robot
+    //Create Robot
     const handleSubmit = e => {
 
          e.preventDefault();
@@ -23,13 +22,14 @@ function Admin ( {robot} ){
 
          fetch(`https://mondo-robot-art-api.herokuapp.com/robots/`, {    
             method: 'POST',
-           // mode: 'no-cors',
+            credentials: 'include',
+            mode: 'no-cors',
             headers: {
-               // 'Authorization' : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoiOGM2OGY2NDAwZTU2NjZlODkwYjUzZWUxZmNkYWU5M2MiLCJpYXQiOjE2MzE4OTQ0MDV9._fuXL3XoHseXNRtNHDMQynktB97c8b1l56oy2ecbIcw",
+                // 'Authorization' : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoiOGM2OGY2NDAwZTU2NjZlODkwYjUzZWUxZmNkYWU5M2MiLCJpYXQiOjE2MzE4OTQ0MDV9._fuXL3XoHseXNRtNHDMQynktB97c8b1l56oy2ecbIcw",
                 'Authorization' : `Bearer ${localStorage.getItem("token")}`,
-              //  'x-robot-art-api-key': '3d100850f7f996899c4b3a9492aa0017',
+                //'x-robot-art-api-key': '3d100850f7f996899c4b3a9492aa0017',
                 'accept': 'application/json',
-                //'Content-Type':  'multipart/form-data'
+                //'Content-Type':  'multipart/form-data' 
                 },
                 body: formData
             }) 
@@ -51,21 +51,18 @@ function Admin ( {robot} ){
                    onChange = {e => setName(e.target.value)} 
                 />
 
-
-                <label for="img">Select image:</label>
-
-
                 <input 
                    type = "file"
+                   ref = {fileInput}
                    name = "image"
                    autoComplete = "off"
-                   value = {image}
-                   onChange = {e => setImage(e.target.files[0])} 
+                   //value = {image} //DO NOT ADD the VALUE. If added, doesn't work
+                   onChange = {(e) => {
+                       console.log(e.target.files[0].name)
+                       setImage(e.target.files[0])}} 
                    accept="image/*"
                 />
                 <input type="submit" value = "??new robot??" />
-
-                {/* first element of the file (which is an array)  */}
             </form>
             </Card>
 

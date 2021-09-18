@@ -7,6 +7,7 @@ import RobotCollection from './components/RobotCollection';
 import ResultCollection from './components/ResultCollection';
 import Admin from './components/Admin';
 import './App.css';
+import HeaderNav from './components/HeaderNav'
 
 
 class App extends React.Component{
@@ -97,7 +98,7 @@ class App extends React.Component{
       <div>
         <main>
 
-          <Navi currentUser = {this.state.currentUser}
+          <HeaderNav currentUser = {this.state.currentUser}
               handleLogout = {this.handleLogout}/>
 
           <Switch>
