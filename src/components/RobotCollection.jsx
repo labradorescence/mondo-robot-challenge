@@ -31,8 +31,6 @@ function RobotCollection ({robot}) {
         // }
 
         // }, [])
-       
-
 
      const cards = robot.map((each, index) =>
 
@@ -44,14 +42,11 @@ function RobotCollection ({robot}) {
             /> 
         )
 
-
-        
-    
         return(
-            <div>
+            <main>
                 {redirect ? <Redirect to ="/login" /> : cards } 
                 {/* if there isn't token, then redirect to login else show card  */}
-            </div> 
+            </main> 
         )
 }
 

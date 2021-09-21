@@ -2,9 +2,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: Helvetica Bold, sans-serif;
+    font-family: Helvetica Bold, sans-serif;  
 
-    
   }
   
   .App {
@@ -19,3 +18,334 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+
+
+
+
+  /*********************** NAV ***********************/
+  /* header */
+  .header{
+  position: absolute;
+  width: 100vw;
+  height: 80px;
+  /* left: 16px; */
+  top: 16px;
+  }
+
+  .nav{
+    /* nav */
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    /* White */
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.17);
+
+  }
+
+    .logo-box{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 81px;
+    left: 100px;
+    top: 30%;
+    bottom: 30%;
+  }
+
+  .logo{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 32px;
+    width: 81px;
+  }
+
+
+  /* nav left */
+  .nav-left{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    position: absolute;
+    width: 169px;
+    left: 237px;
+    top: 35%;
+    bottom: 38.75%;
+  }
+
+    .nav-left > .robots{
+      /* Robots */
+        position: static;
+        width: 63px;
+        height: 21px;
+        left: 0px;
+        top: 0px;
+
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+
+
+        /* Gray 3 */
+        color: #414242;
+
+        /* Inside Auto Layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0px 40px;
+    }
+
+    .nav-left > .results{
+        /* Results */
+        position: static;
+        width: 66px;
+        height: 21px;
+        left: 103px;
+        top: 0px;
+
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+
+        /* Gray 3 */
+        color: #414242;
+
+        /* Inside Auto Layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        margin: 0px 40px;
+    }
+
+    /* nav right */
+    .nav-right{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    position: absolute;
+    width: 127px;
+    right: 100px;
+    top: 38.75%;
+    bottom: 38.75%; 
+  }
+
+
+  .nav-right > .logout{
+    /* Log Out */
+
+    list-style: none;
+
+    position: static;
+    width: 57px;
+    height: 18px;
+    right: 0px;
+    top: 0px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    /* Gray 2 */
+    color: #737475;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 24px;
+  }
+
+
+  .nav-right > .admin{
+      /* Admin */
+
+        position: static;
+        width: 46px;
+        height: 18px;
+        right: 81px;
+        top: 0px;
+        left:0px;
+
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+
+        /* Gray 2 */
+        color: #737475 !important;
+
+        /* Inside Auto Layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0px 24px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+    
+    .bar {
+        display: block;
+
+        width: 33px;
+        height: 2px;
+        left: 318px;
+        top: 47px;
+
+        /* Gray 3 */
+        background: #414242;
+
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    /*****************  tablet **************** */
+    @media screen 
+        and (max-width: 900px) {
+        .logo-box{
+            /* MR-Logo 2 */
+            left: 40px;
+        }
+        
+        .nav-left{
+            left: 177px;
+        }
+        
+        .nav-right{
+            right: 100px;
+        }
+    }
+/*****************  END of tablet **************** */
+
+
+
+
+/*****************  mobile **************** */
+    @media screen 
+    and (max-width: 620px) {
+    .nav{
+        width: 100vw;
+    }
+    .logo-box{
+        /* MR-Logo 2 */
+        width: 67px;
+        left: 24px;
+        top: 33.75%;
+        bottom: 33.75%;
+
+        left: 24px;
+        top: 27px;
+        border-radius: 0px;    
+    }
+    .logo{
+        height: 26px;
+        width: 67px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+    }
+    
+    .nav-left, .nav-right{
+        display: none;
+    }
+
+
+
+
+
+
+    /* ul */
+    .nav-left, .nav-right { 
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+
+    .nav-left.active, .nav-right.active {
+        left: 0;
+    }
+
+    /* li */
+    .robots, .results, .admin, .logout {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        position:absolute;
+        cursor: pointer;
+        left: 318px;
+        top: 31px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    }
+/*****************  END of mobile **************** */
+
+
+
+
+/*********************** END of NAV ***********************/
+
+
+
+
+
+
+
+  main{
+    margin-top: 80px;
+    background-color: white;
+}
+
+
+.login{
+    margin-top:  80px;
+}

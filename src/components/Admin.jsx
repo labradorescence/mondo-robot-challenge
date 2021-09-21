@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 //import RobotCollection from './RobotCollection';
 import RobotCard from './RobotCard';
-import { Card } from 'react-bootstrap';
 
 
 function Admin ( {robot} ){
@@ -39,9 +38,8 @@ function Admin ( {robot} ){
     }
 
     return(
-        <div>
+        <main>
 
-            <Card style={{ width: '18rem' }}>
             <form onSubmit = {handleSubmit}>
                 <input 
                    type = "text"
@@ -64,7 +62,6 @@ function Admin ( {robot} ){
                 />
                 <input type="submit" value = "??new robot??" />
             </form>
-            </Card>
 
             {robot && robot.map((each)=>{
                 return(
@@ -76,7 +73,7 @@ function Admin ( {robot} ){
                 /> 
                 )
             })}
-        </div>
+        </main>
     )
 }
 

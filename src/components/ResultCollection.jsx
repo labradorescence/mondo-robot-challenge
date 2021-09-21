@@ -84,12 +84,12 @@ function ResultCollection ({robot}) {
         )        
     
         return(
-            <div>
+            <main>
 
                 <h4>RESULT</h4> 
                 {redirect ? <Redirect to ="/login" /> : cards } 
                 {/* if there isn't token, then redirect to login else show card  */}
-            </div> 
+            </main> 
         )
 }
 

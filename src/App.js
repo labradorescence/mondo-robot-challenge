@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import Navi from './components/Navi';
+import Navi from './components/Navi-not';
 import RobotCollection from './components/RobotCollection';
 import ResultCollection from './components/ResultCollection';
 import Admin from './components/Admin';
@@ -95,11 +95,12 @@ class App extends React.Component{
   render(){
 
     return (
+   
       <div>
-        <main>
-
+        
           <HeaderNav currentUser = {this.state.currentUser}
-              handleLogout = {this.handleLogout}/>
+                     handleLogout = {this.handleLogout}/>
+
 
           <Switch>
 
@@ -112,8 +113,7 @@ class App extends React.Component{
               </Route> 
 
               <Route path="/robot" exact>
-                {this.state.currentUser ? <h1> Welcome {this.state.currentUser.name} </h1> : <Redirect to='/' />}
-                <RobotCollection  robot = {this.state.robot} />
+                {this.state.currentUser ?  <RobotCollection  robot = {this.state.robot} /> : <Redirect to='/' />}     
               </Route>
 
               <Route path="/result" exact>
@@ -121,16 +121,14 @@ class App extends React.Component{
               </Route>
               
               <Route path="/admin" exact >
-                <Admin robot = {this.state.robot}/>
+                {this.state.currentUser && this.state.currentUser.email === "admin@mondorobot.com" ? <Admin robot = {this.state.robot}/> : <Redirect to='/' />}       
               </Route>
 
               <Route path="/">
-                <h1>Please Login or Sign Up</h1>
               </Route>
 
           </Switch>
-
-        </main>
+        
       </div>
   )}
 

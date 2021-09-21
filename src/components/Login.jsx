@@ -38,10 +38,8 @@ class Login extends React.Component {
 
     render(){
         return (
+            <section className="login">
             <form onSubmit = {this.handleSubmit}>
-                
-                <h1>Login</h1>
-
                 <label>Email</label>
                 
                 <input 
@@ -64,6 +62,7 @@ class Login extends React.Component {
                 
                 <input type="submit" value="Login" />
             </form>
+            </section>
         )
     }
 }
