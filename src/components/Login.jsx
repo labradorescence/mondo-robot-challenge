@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
     
@@ -38,31 +39,40 @@ class Login extends React.Component {
 
     render(){
         return (
-            <section className="login">
-            <form onSubmit = {this.handleSubmit}>
-                <label>Email</label>
-                
-                <input 
-                    type="text" 
-                    name="email" 
-                    autoComplete="off" 
-                    value = {this.state.email} 
-                    onChange={this.handleChange} 
-                />
-                
-                <label>Password</label>
-                
-                <input 
-                    type="password" 
-                    name="password" 
-                    value = {this.state.password} 
-                    onChange={this.handleChange} 
-                    autoComplete="current-password" 
-                />
-                
-                <input type="submit" value="Login" />
-            </form>
-            </section>
+            <main className = "login-main">
+                <section className="login">
+                    <logo className="login-logo-box"> <img src="/rectangle2.png"  alt="logo" className="login-logo"/> </logo>
+                    <form onSubmit = {this.handleSubmit}>
+                        
+                        <section className="email-box">
+                        <label className="email-label">Email</label> 
+                        <input 
+                            type="text" 
+                            name="email" 
+                            autoComplete="off" 
+                            value = {this.state.email} 
+                            onChange={this.handleChange} 
+                            className="email-input"
+                        />
+                        </section>
+
+                        <section className="pw-box">
+                        <label className="pw-label">Password</label>
+                        <input 
+                            type="password" 
+                            name="password" 
+                            value = {this.state.password} 
+                            onChange={this.handleChange} 
+                            autoComplete="current-password" 
+                            className="pw-input"
+                        />
+                        </section>
+                        
+                        <input type="submit" value="Login" className="login-btn"/>
+                    </form>
+                    <Link to ="/signup" > <button className="signup-btn"> Register </button> </Link> 
+                </section>
+            </main>
         )
     }
 }

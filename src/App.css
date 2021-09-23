@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: Helvetica Bold, sans-serif;  
-
+    /* border: solid 1px red; */
   }
   
   .App {
@@ -330,22 +330,260 @@
 /*****************  END of mobile **************** */
 
 
-
-
 /*********************** END of NAV ***********************/
 
 
 
 
 
+/*********************** LOGIN ***********************/
 
+.login-main{
+    background: #E5E5E5;
+    position: relative;
 
-  main{
-    margin-top: 80px;
-    background-color: white;
 }
-
 
 .login{
-    margin-top:  80px;
+    /* Rectangle 1 */
+    position: absolute;
+    width: 607px;
+    height: 713px;
+    left: 417px;
+    top: 97px;
+
+    /* White */
+    background: #FFFFFF;
+    /* Gray 1 */
+    border: 1px solid #D8DADB;
+    box-sizing: border-box;
+    box-shadow: 0px 23px 30px -9px rgba(0, 0, 0, 0.17);
+    border-radius: 8px;
 }
+
+.login-logo-box{
+    position: absolute;
+    width: 233px;
+    height: 91px;
+    left: 604px;
+    top: 177px;
+
+    height: 91px;
+    width: 233px;
+    left: 187px;
+    top: 90px;
+    border-radius: 0px;
+}
+
+.login-logo{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    Width : 233px;
+    Height : 91px;
+}
+
+.email-box{
+    position: absolute;
+    width: 500px;
+    height: 83px;
+    left: 53px;
+    top: 251px;
+}
+
+.email-label, .pw-label{
+    /* Frame 1 */
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2px;
+
+    position: absolute;
+    width: 54px;
+    left: 21px;
+    top: 0%;
+    bottom: 65.06%;
+
+    /* White */
+
+    background: #FFFFFF;
+
+    position: static;
+    width: 46px;
+    height: 21px;
+    left: 4px;
+    top: 3px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+
+    /* Gray 2 */
+
+    color: #737475;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+
+.email-input:-webkit-autofill,
+.email-input:-webkit-autofill:hover,
+.email-input:-webkit-autofill:focus,
+.email-input:-webkit-autofill:active,
+.email-input{
+    /* Rectangle 2 */
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 22.89%;
+    bottom: 0%;
+    width: 500px;
+
+    /* White */
+    transition: background-color 5000s ease-in-out 0s;
+    background: #FFFFFF !important;
+    /* Gray 1 */
+
+    border: 1px solid #D8DADB;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+
+    padding-left: 27px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 25px;
+
+    /* Gray 3 */
+
+    color: #414242;
+}
+
+.pw-box{
+    position: absolute;
+    width: 500px;
+    height: 83px;
+    left: 53px;
+    top: 393px;
+}
+
+.pw-input:-webkit-autofill,
+.pw-input:-webkit-autofill:hover,
+.pw-input:-webkit-autofill:focus,
+.pw-input:-webkit-autofill:active,
+.pw-input{
+    /* Rectangle 2 */
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 22.89%;
+    bottom: 0%;
+    width: 500px;
+
+    /* White */
+    transition: background-color 5000s ease-in-out 0s;
+    background: #FFFFFF;
+    /* Gray 1 */
+
+    border: 1px solid #D8DADB;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    padding-left: 27px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 25px;
+
+    /* Gray 3 */
+
+    color: #414242;
+    
+}
+
+.p-text{
+    /* mr.robot@mondodorobt.com */
+    position: absolute;
+    width: 274px;
+    left: 27px;
+    top: 45.78%;
+    bottom: 24.1%;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
+
+    /* Gray 3 */
+
+    color: #414242;
+}
+
+
+
+
+.login-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 216px;
+
+    position: absolute;
+    width: 505px;
+    height: 53px;
+    left: 53px;
+    top: 497px;
+
+    /* Gray 3 */
+    background: #414242;
+    border-radius: 8px;
+
+    color: white;
+}
+
+.signup-btn{
+    /* Button */
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 216px;
+
+    position: absolute;
+    width: 505px;
+    height: 53px;
+    left: 53px;
+    top: 566px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* Gray 3 */
+
+    border: 2px solid #414242;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+
+/*********************** END of LOGIN ***********************/

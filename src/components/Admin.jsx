@@ -18,19 +18,20 @@ function Admin ( {robot} ){
 
         formData.set('name', name);
         formData.set('image', image); 
-
+ 
+        console.log("about to post")
          fetch(`https://mondo-robot-art-api.herokuapp.com/robots/`, {    
             method: 'POST',
             credentials: 'include',
-            mode: 'no-cors',
+            //mode: 'no-cors',
             headers: {
-                // 'Authorization' : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoiOGM2OGY2NDAwZTU2NjZlODkwYjUzZWUxZmNkYWU5M2MiLCJpYXQiOjE2MzE4OTQ0MDV9._fuXL3XoHseXNRtNHDMQynktB97c8b1l56oy2ecbIcw",
                 'Authorization' : `Bearer ${localStorage.getItem("token")}`,
-                //'x-robot-art-api-key': '3d100850f7f996899c4b3a9492aa0017',
-                'accept': 'application/json',
-                //'Content-Type':  'multipart/form-data' 
+                'x-robot-art-api-key': '3d100850f7f996899c4b3a9492aa0017',
+                'Accept': 'application/json',
+                'Content-Type': 'multipart/form-data'
                 },
                 body: formData
+                //body: JSON.stringify(formData) 
             }) 
             .then(response => response.json())
             .then(data => console.log(data))
@@ -60,8 +61,9 @@ function Admin ( {robot} ){
                        setImage(e.target.files[0])}} 
                    accept="image/*"
                 />
-                <input type="submit" value = "??new robot??" />
+                <input type="submit" value = "submit" />
             </form>
+
 
             {robot && robot.map((each)=>{
                 return(

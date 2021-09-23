@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import Navi from './components/Navi-not';
 import RobotCollection from './components/RobotCollection';
 import ResultCollection from './components/ResultCollection';
 import Admin from './components/Admin';
@@ -79,7 +78,7 @@ class App extends React.Component{
     localStorage.removeItem("token")
     // and clear the user in state
     this.setState({ currentUser: null}, () => {
-      this.props.history.push('/')
+      this.props.history.push('/login')
     })
   }
 
@@ -121,7 +120,7 @@ class App extends React.Component{
               </Route>
               
               <Route path="/admin" exact >
-                {this.state.currentUser && this.state.currentUser.email === "admin@mondorobot.com" ? <Admin robot = {this.state.robot}/> : <Redirect to='/' />}       
+                {this.state.currentUser && this.state.currentUser.email === "admin@mondorobot.com" ? <Admin robot = {this.state.robot}/> : <Redirect to='/login' />}       
               </Route>
 
               <Route path="/">

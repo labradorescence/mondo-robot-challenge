@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import Login from "./Login";
+import SignUp from "./SignUp";
 
 const HeaderNav = ( {currentUser, handleLogout}) => {
   // const [toggle, toggleNav] = useState(false);
@@ -70,24 +72,15 @@ const HeaderNav = ( {currentUser, handleLogout}) => {
     )
 } else { //not logged in 
     return (
-      <header className="header">
-      <nav className = "nav">
+        <article>
         <ul>
-            <Link to ="/login"> Login </Link>
+            <Link to ="/login"> {Login} </Link>
         </ul>
 
         <ul>
-            <Link to="/signup"> Signup </Link>
+            <Link to="/signup"> {SignUp} </Link>
         </ul> 
-
-        <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-        </div>
-
-      </nav>
-      </header>
+        </article>
     )
 }
 };
