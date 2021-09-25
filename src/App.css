@@ -19,6 +19,19 @@
     cursor: pointer;
   }
 
+  h1{
+    /* H1 */
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 69px;
+    /* identical to box height */
+
+    /* Gray 3 */
+    color: #414242;
+  }
+
 
 
 
@@ -135,7 +148,7 @@
         flex-grow: 0;
         margin: 0px 40px;
     }
-
+                                                                                                                                                                                                                                                                                                                                                                    
     /* nav right */
     .nav-right{
     display: flex;
@@ -336,12 +349,14 @@
 
 
 
-/*********************** LOGIN ***********************/
+/*********************** LOGIN PAGE ***********************/
 
 .login-main{
     background: #E5E5E5;
     position: relative;
-
+    height: 100vh;
+    width: 100vw; 
+    /* display: flex; */
 }
 
 .login{
@@ -351,6 +366,10 @@
     height: 713px;
     left: 417px;
     top: 97px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    
 
     /* White */
     background: #FFFFFF;
@@ -585,5 +604,313 @@
     border-radius: 8px;
 }
 
+/*****************  tablet **************** */
+/* @media screen 
+ and (max-width: 900px) {
+} */
+/*****************  END of tablet **************** */
 
-/*********************** END of LOGIN ***********************/
+
+
+
+/*****************  mobile **************** */
+@media screen 
+and (max-width: 620px) {
+
+    .login-main{
+        background-color: #FFFFFF;
+        height: 100%;
+        width: 100%; 
+    }
+    
+    .login{
+        /* Rectangle 1 */
+        Width: 375px;
+        Height: 812px;
+      
+        /* White */
+        background: pink;
+        /* Gray 1 */
+        border: 0;
+        box-shadow: 0px;
+        border-radius: 0px;
+    }
+    
+    .login-logo-box{
+        width: 165px;
+        height: 65px;
+        left: 104px;
+        top: 74px;
+    }
+    
+    .email-box{
+        position: absolute;
+        width: 500px;
+        height: 83px;
+        left: 53px;
+        top: 251px;
+    }
+    
+    .email-label, .pw-label{
+        /* Frame 1 */
+        /* Auto Layout */
+    
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 2px;
+    
+        position: absolute;
+        width: 54px;
+        left: 21px;
+        top: 0%;
+        bottom: 65.06%;
+    
+        /* White */
+    
+        background: #FFFFFF;
+    
+        position: static;
+        width: 46px;
+        height: 21px;
+        left: 4px;
+        top: 3px;
+    
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+    
+    
+        /* Gray 2 */
+    
+        color: #737475;
+    
+        /* Inside Auto Layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0px 10px;
+    }
+    
+    
+    .email-input:-webkit-autofill,
+    .email-input:-webkit-autofill:hover,
+    .email-input:-webkit-autofill:focus,
+    .email-input:-webkit-autofill:active,
+    .email-input{
+        /* Rectangle 2 */
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 22.89%;
+        bottom: 0%;
+        width: 500px;
+    
+        /* White */
+        transition: background-color 5000s ease-in-out 0s;
+        background: #FFFFFF !important;
+        /* Gray 1 */
+    
+        border: 1px solid #D8DADB;
+        box-sizing: border-box;
+        border-radius: 8px;
+    
+    
+        padding-left: 27px;
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 25px;
+    
+        /* Gray 3 */
+    
+        color: #414242;
+    }
+    
+    .pw-box{
+        position: absolute;
+        width: 500px;
+        height: 83px;
+        left: 53px;
+        top: 393px;
+    }
+    
+    .pw-input:-webkit-autofill,
+    .pw-input:-webkit-autofill:hover,
+    .pw-input:-webkit-autofill:focus,
+    .pw-input:-webkit-autofill:active,
+    .pw-input{
+        /* Rectangle 2 */
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 22.89%;
+        bottom: 0%;
+        width: 500px;
+    
+        /* White */
+        transition: background-color 5000s ease-in-out 0s;
+        background: #FFFFFF;
+        /* Gray 1 */
+    
+        border: 1px solid #D8DADB;
+        box-sizing: border-box;
+        border-radius: 8px;
+    
+        padding-left: 27px;
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 25px;
+    
+        /* Gray 3 */
+    
+        color: #414242;
+        
+    }
+    
+    .p-text{
+        /* mr.robot@mondodorobt.com */
+        position: absolute;
+        width: 274px;
+        left: 27px;
+        top: 45.78%;
+        bottom: 24.1%;
+    
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 25px;
+    
+        /* Gray 3 */
+    
+        color: #414242;
+    }
+    
+    
+    
+    
+    .login-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 216px;
+    
+        position: absolute;
+        width: 505px;
+        height: 53px;
+        left: 53px;
+        top: 497px;
+    
+        /* Gray 3 */
+        background: #414242;
+        border-radius: 8px;
+    
+        color: white;
+    }
+    
+    .signup-btn{
+        /* Button */
+        /* Auto Layout */
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 216px;
+    
+        position: absolute;
+        width: 505px;
+        height: 53px;
+        left: 53px;
+        top: 566px;
+    
+        /* White */
+    
+        background: #FFFFFF;
+        /* Gray 3 */
+    
+        border: 2px solid #414242;
+        box-sizing: border-box;
+        border-radius: 8px;
+    } 
+    
+}
+/*********************** END of LOGIN PAGE ***********************/
+
+
+
+
+
+/*********************** ADMIN PAGE ***********************/
+
+.admin-page{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 49px;
+    padding-left: 100px;
+    background-color: #E5E5E5;;
+    /* background-color: pink;
+    border: 1px solid red; */
+}
+
+.admin-h1{
+    width: 187px;
+    height: 69px;
+    margin: 3rem 0 3rem 0;
+    padding: 4rem 0 4rem 0;
+}
+
+.admin-form{
+
+    top: 276px;
+    width: 397px;
+    height: 530px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* Gray 1 */
+
+    /* border: 1px solid red; */
+    border: 1px solid #D8DADB;
+    box-sizing: border-box;
+    /* Card Shadow */
+
+    box-shadow: 0px 9px 15px -9px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+}
+
+.robot-card{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/*********** File Input ***********/
+.file-input-none{
+    display: none;
+}
+
+.file-input{
+    cursor: pointer;
+}
+
+.img-upload{
+    width: 349px;
+}
+/*********** File Input ***********/
+
+
+/*********************** END of ADMIN PAGE ***********************/

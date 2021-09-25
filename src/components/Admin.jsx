@@ -18,7 +18,7 @@ function Admin ( {robot} ){
 
         formData.set('name', name);
         formData.set('image', image); 
- 
+
         console.log("about to post")
          fetch(`https://mondo-robot-art-api.herokuapp.com/robots/`, {    
             method: 'POST',
@@ -39,9 +39,13 @@ function Admin ( {robot} ){
     }
 
     return(
-        <main>
+        <main className="admin-page">
+            <h1 className="admin-h1">Admin</h1>
 
-            <form onSubmit = {handleSubmit}>
+            <form onSubmit = {handleSubmit} className="admin-form">
+                <h2>Add Robot</h2>
+
+                <label>Name</label>
                 <input 
                    type = "text"
                    name = "name"
@@ -49,6 +53,10 @@ function Admin ( {robot} ){
                    value = {name}
                    onChange = {e => setName(e.target.value)} 
                 />
+
+                <label className="file-input">  
+                    <img src = "/img-upload.png" alt = "img-upload" className="img-upload" />
+                </label>
 
                 <input 
                    type = "file"
@@ -60,11 +68,14 @@ function Admin ( {robot} ){
                        console.log(e.target.files[0].name)
                        setImage(e.target.files[0])}} 
                    accept="image/*"
+                   className="file-input-none"
                 />
-                <input type="submit" value = "submit" />
+                
+                <input type="submit" value = "Add Robot"  className="file-input"/>
             </form>
 
 
+            <section className = "robot-card">
             {robot && robot.map((each)=>{
                 return(
                 <RobotCard //sending id, name, url as props to RobotCard
@@ -74,7 +85,7 @@ function Admin ( {robot} ){
                 url = {each.url}
                 /> 
                 )
-            })}
+            })}</section>
         </main>
     )
 }
